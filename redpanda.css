@@ -1,0 +1,192 @@
+* { box-sizing: border-box;
+}
+body { 
+       background-color: #EAEAEA;
+       color: #555555;
+       font-family: Arial, Helvetica, sans-serif;
+}
+#wrapper {
+       background-color: #FFFFFF;
+       background-image: linear-gradient(to bottom, #FFFFFF, #e99a09);
+}
+header {
+       background-color: #422300;
+       color: #FFFFFF;
+       text-align: center;
+}
+       header a {
+              text-decoration: none;
+       }
+       header a:link,
+       header a:visited {
+              color: #FFFFFF;
+       }
+       :link {
+              color: #FFFFFF;
+       }
+       :visited {
+              color: #FFFFFF;
+       }
+nav { 
+       font-size: 120%;
+       font-weight: bold;
+       padding: 0;
+       text-align: center;
+}
+       nav a {
+              text-decoration: none;  
+       }
+       nav li {
+              display:block;
+              border-bottom:1px solid #422300;
+       }
+       nav ul {
+              list-style-type: none;
+              padding: 0;
+              margin: 0;
+              font-size: 1.2em;
+       }
+       :link {
+              color: #f05006;
+       }
+       :visited {
+                     color: #422300;
+              }
+       :hover {
+              color: #ff2600;
+       }
+main {
+       background-color: #FFFFFF;
+       padding: 1px 20px 20px 30px;
+       display:block;
+}
+h1 {
+       color: #FFFFFF;
+       margin-bottom: 0;
+       letter-spacing: .25em;
+       font-family: Georgia, Times, serif;
+       margin: 0px;
+       padding-top: .5em;
+       padding-bottom: .5em;
+}
+h2 { 
+       color: #422300; 
+       font-family: Georgia, Times, serif;
+       text-shadow: 1px #CCCCCC;
+}
+h3 { 
+       color: #422300; 
+       font-family: Georgia, Times, serif;
+}
+footer {
+       background-color: #FFFFFF;
+       font-size: 75%;
+       font-style: italic;
+       text-align: center;
+       font-family: Georgia, Times, serif;
+       padding: 2em;
+}
+.conservation { 
+       color: #5c3202; 
+       font-weight: bold;
+}
+.logo {
+  width: 25px;
+  height: 25px;
+}
+#homehero {
+    height: 300px;
+       background-image: url(homeredpanda.jpg);
+       background-size: auto;
+       background-repeat: no-repeat;
+}
+#home1textimage {
+    background-image: url(redpanda1.jpg);
+}
+#home2textimage {
+    background-image: url(redpanda2.jpg);
+}
+.textimage-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.textimage-row .textimage {
+  width: 100%;
+  min-height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+main > section.textimage-row:first-child {
+  flex-direction: row-reverse;
+}
+
+@media screen and (min-width: 600px) {
+       #homehero {
+              background-size: cover;
+       }
+       nav ul {
+              display: flex;
+              flex-wrap: nowrap;
+              justify-content: space-around;
+       }
+       nav li {
+              border-bottom: none;
+       }
+       .textimage-row {
+              flex-direction: row;
+       }
+       .textimage-row .textimage {
+              flex: 0 0 35%;
+       }
+       section {
+              margin-left: 2em;
+              margin-right: 2em;
+       }
+       .flow {
+              display: flex;
+              flex-direction: row;
+              flex:1;
+       }
+}
+@media screen and (min-width: 1024px) {
+       #wrapper {
+              margin: 0 auto;
+              width: 80%;
+              border:#e99a09 solid 1px;
+              box-shadow: 3px 3px #e99a09;
+       }
+       nav {
+              text-align: left;
+              padding-left: 1em;
+       }
+    @supports (display: grid) {
+       #wrapper {
+              display: grid;
+              grid-template-columns: 180px auto;
+              grid-template-rows: auto;
+              grid-template-areas:
+                     "header header"
+                     "nav hero"
+                     "nav main"
+                     "nav footer";
+       }
+       header { grid-area: header; }
+       nav { grid-area: nav; }
+       .hero { grid-area: hero; }
+       main { grid-area: main; }
+       footer { grid-area: footer; }
+       #wrapper > nav ul {
+              flex-direction: column;
+              padding-top: 1em;
+       }
+}
+}
