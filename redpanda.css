@@ -106,6 +106,24 @@ footer {
 #home2textimage {
     background-image: url(redpanda2.jpg);
 }
+#story1image {
+    background-image: url(redpanda_subspecies.jpg);
+}
+#story2image {
+    background-image: url(templepanda.jpeg);
+}
+#story3image {
+    background-image: url(pandahabitat.jpg);
+}
+#rpn {
+    background-image: url(rpn.jpg);
+}
+#wwf {
+    background-image: url(wwf.jpg);
+}
+#gwf {
+    background-image: url(gwf.jpg);
+}
 .textimage-row {
   display: flex;
   flex-direction: column;
@@ -124,8 +142,7 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
 }
-
-main > section.textimage-row:first-child {
+main > section.textimage-row:nth-child(odd) {
   flex-direction: row-reverse;
 }
 
